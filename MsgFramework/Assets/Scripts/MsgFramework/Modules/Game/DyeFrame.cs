@@ -6,7 +6,7 @@ namespace DyeFramework.Modules
 {
     public class DyeFrame : Base.MonoBase<GameManager>
     {
-        static bool isInit = false;
+        //static bool isInit = false;
         static DyeFrame instant = null;
         private void Start() {
             if(instant == null){

@@ -6,7 +6,7 @@ namespace DyeFramework.Common{
     /// 对象池
     /// </summary>
     /// <typeparam name="T">MonoBehaviour的子类</typeparam>
-    public class Pool<T> where T : Behaviour
+    public class Pool<T> where T : Component
     {
         T prefab;//池中对象的预制体
         Queue<T> q;//可复用的物体队列
