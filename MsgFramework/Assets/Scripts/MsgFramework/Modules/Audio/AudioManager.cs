@@ -78,6 +78,9 @@ namespace DyeFramework.Modules
             for(int i=0;i<2;i++){
                 audioSourcesMusic[i] = new GameObject("AudioSourceMusic_"+i).AddComponent<AudioSource>();
                 audioSourcesMusic[i].transform.parent = transform;
+                audioSourcesMusic[i].transform.localPosition = Vector3.zero;
+                audioSourcesMusic[i].playOnAwake = false;
+                audioSourcesMusic[i].loop = true;
             }
             //Volume
             InitVolume();
@@ -206,7 +209,7 @@ namespace DyeFramework.Modules
         /// <param name="clipId">音频id</param>
         /// <param name="libId">音频库id</param>
         public static void PlayMusic(string libId, string clipId){
-            Instance.PlayMusic(GetAudioClip(clipId, libId));
+            Instance.PlayMusic(GetAudioClip(libId, clipId));
         }
         /// <summary>
         /// 播放音乐
